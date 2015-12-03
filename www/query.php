@@ -1,10 +1,9 @@
 <?php  /* devuelve el nombre de la base de datos actualmente seleccionada */
 include("connect2.php");
 
-
 $output = array();
 
-if ($result = $mysqli->query("SELECT NOMBRE,FECHA,PUNTUACION FROM PUNTUACIONES")) {
+if ($result = $mysqli->query("SELECT NOMBRE,PUNTUACION FROM PUNTUACIONES")) {
     while($row = $result->fetch_row()){
       $output[] = $row;
     }
