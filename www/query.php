@@ -6,7 +6,7 @@ $output = array();
 
 if ($result = $mysqli->query("SELECT NOMBRE,FECHA,PUNTUACION FROM PUNTUACIONES")) {
     while($row = $result->fetch_row()){
-      $output[  ] = $row;
+      $output[] = $row;
     }
 
     echo json_encode(array('status' => 'success', 'items' => $output));

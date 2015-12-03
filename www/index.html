@@ -6,9 +6,10 @@
   <meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no'/>
   <link rel='stylesheet' href='http://code.jquery.com/mobile/1.4.0-beta.1/jquery.mobile-1.4.0-beta.1.min.css'/>
   <link rel='stylesheet' href='css/index.css'/>
-  
+
   <script src='http://code.jquery.com/jquery-1.10.1.min.js'></script>
   <script src='http://code.jquery.com/mobile/1.4.0-beta.1/jquery.mobile-1.4.0-beta.1.min.js'></script>
+  <script src='js/connect.js' charset="utf-8"></script>
 </head>
 <body>
 
@@ -18,14 +19,28 @@
         Practica Phonegap - JQueryMobile
       </h1>
     </div>
-
     <div data-role='main' class="ei" >
         <fieldset class="ui-grid-b ui-responsive">
           <div class="ui-block-a"></div>
           <div class="ui-block-b" align="center">
-            <div data-role ="controlgroup" >
+            <div data-role="content">
+              <table data-role="table" class="ui-responsive ui-shadow">
+                <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Fecha</th>
+                    <th>Puntuacion</th>
+                  </tr>
+                </thead>
+                <tbody data-role="table-body">
+
+                </tbody>
+              </table>
+            </div>
+
+            <!-- <div data-role ="controlgroup" >
               <a href="#pagetwo" class="ui-btn ui-icon-info-left ui-corner-all">Dialog: Hola Mundo!</a>
-              <a href="#myPopup" data-rel="popup"class="ui-btn ui-corner-all">Popup: Hola Mundo!</a>
+              <a href="#myPopup" data-rel="popup" class="ui-btn ui-corner-all">Popup: Hola Mundo!</a>
               <a data-role="collapsible" class="ui-corner-all" >
                 <h1 align="center">Collapsible: Hola Mundo!</h1>
                 <p>Hola Mundo!</p>
@@ -34,7 +49,7 @@
               <div data-role="popup" id="myPopup" class="ui-content">
                 <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
                 <p>Hola mundo, soy un Popup!</p>
-              </div>
+              </div> -->
           </div>
         </fieldset>
 
