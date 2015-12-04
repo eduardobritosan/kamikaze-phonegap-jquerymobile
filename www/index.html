@@ -11,6 +11,7 @@
   <script src='http://code.jquery.com/mobile/1.4.0-beta.1/jquery.mobile-1.4.0-beta.1.min.js'></script>
   <script src='js/connect.js' charset="utf-8"></script>
   <script src='js/sendData.js' charset="utf-8"></script>
+  <script src="js/accelerometer.js" charset="utf-8"></script>
 </head>
 <body>
 
@@ -41,6 +42,10 @@
                 <input type="text" name="nombre" id="nombre">
                 <button type="submit" class="ui-btn ui-icon-info-left ui-corner-all">Enviar a DB</button>
               </form>
+              <input type="number" id="txtX" value="0"/>
+              <input type="number" id="txtY" value="0"/>
+              <input type="number" id="txtZ" value="0"/>
+              <button id="btnStart" class="ui-btn ui-icon-info-left ui-corner-all">Start accelerometer</button>
             </div>
 
             <!-- <div data-role ="controlgroup" >
