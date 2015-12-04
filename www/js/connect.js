@@ -2,6 +2,13 @@
 $(document).ready(function () {
   $("#showTable").click(function(){
 
+    $.getJSON('https://maps.googleapis.com/maps/api/geocode/json?latlng=28.485463,-16.321617&key=AIzaSyDQLq2s2_duTmkGDAYdWeKAuQLrBSxcZoo', function(res) {
+      if (res != undefined)
+      console.log(res.results[0].address_components[0].long_name);
+      else {
+        console.log("undefined");
+      }
+    });
       // cache this page for later use (inside the AJAX function)
       // var $this = $(this);
       // make an AJAX call to your PHP script
