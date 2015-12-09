@@ -1,90 +1,91 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>jQM Complex Demo</title>
-  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
-  <meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1, minimum-scale=1.0, user-scalable=no'/>
-  <link rel='stylesheet' href='http://code.jquery.com/mobile/1.4.0-beta.1/jquery.mobile-1.4.0-beta.1.min.css'/>
-  <link rel='stylesheet' href='css/index.css'/>
+  <head>
+    <title>jQM Complex Demo</title>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+    <meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1, minimum-scale=1.0, user-scalable=no'/>
+    <link rel='stylesheet' href='http://code.jquery.com/mobile/1.4.0-beta.1/jquery.mobile-1.4.0-beta.1.min.css'/>
+    <link rel='stylesheet' href='css/index.css'/>
 
-  <script src='http://code.jquery.com/jquery-1.10.1.min.js'></script>
-  <script src='http://code.jquery.com/mobile/1.4.0-beta.1/jquery.mobile-1.4.0-beta.1.min.js'></script>
-  <script src='js/connect.js' charset="utf-8"></script>
-  <script src='js/sendData.js' charset="utf-8"></script>
-  <script src="js/accelerometer.js" charset="utf-8"></script>
-</head>
-<body>
+    <script src='http://code.jquery.com/jquery-1.10.1.min.js'></script>
+    <script src='http://code.jquery.com/mobile/1.4.0-beta.1/jquery.mobile-1.4.0-beta.1.min.js'></script>
+    <script src='js/connect.js' charset="utf-8"></script>
+    <script src='js/sendData.js' charset="utf-8"></script>
+    <script src="js/accelerometer.js" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script src="js/gps.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div data-role='page' id='home' data-theme='a'>
+      <div data-theme='a' data-role='header'>
+        <h1>
+          Practica Phonegap - JQueryMobile
+        </h1>
+      </div>
+      <div data-role='main' class="ui-content" >
+          <fieldset class="ui-grid-b ui-responsive">
+            <div class="ui-block-a"></div>
+            <div class="ui-block-b" align="center">
+              <div data-role="content">
+                <table data-role="table" class="ui-responsive   ui-shadow">
+                  <thead>
+                    <tr>
+                      <th>Nombre</th>
+                      <th>Puntuacion</th>
+                    </tr>
+                  </thead>
+                  <tbody data-role="table-body">
+                  <button id="showTable" class="ui-btn ui-icon-info-left ui-corner-all">Mostrar DB</button>
+                  </tbody>
+                </table>
+                <form id="formAJAX">
+                  First name:<br>
+                  <input type="text" name="nombre" id="nombre">
+                  <button type="submit" class="ui-btn ui-icon-info-left ui-corner-all">Enviar a DB</button>
+                </form>
+                <input type="number" id="txtX" value="0"/>
+                <input type="number" id="txtY" value="0"/>
+                <input type="number" id="txtZ" value="0"/>
+                <button id="btnStart" class="ui-btn ui-icon-info-left ui-corner-all">Start acceleration</button>
+              </div>
 
-  <div data-role='page' id='home' data-theme='a'>
-    <div data-theme='a' data-role='header'>
-      <h1>
-        Practica Phonegap - JQueryMobile
-      </h1>
-    </div>
-    <div data-role='main' class="ui-content" >
-        <fieldset class="ui-grid-b ui-responsive">
-          <div class="ui-block-a"></div>
-          <div class="ui-block-b" align="center">
-            <div data-role="content">
-              <table data-role="table" class="ui-responsive   ui-shadow">
-                <thead>
-                  <tr>
-                    <th>Nombre</th>
-                    <th>Puntuacion</th>
-                  </tr>
-                </thead>
-                <tbody data-role="table-body">
-                <button id="showTable" class="ui-btn ui-icon-info-left ui-corner-all">Mostrar DB</button>
-                </tbody>
-              </table>
-              <form id="formAJAX">
-                First name:<br>
-                <input type="text" name="nombre" id="nombre">
-                <button type="submit" class="ui-btn ui-icon-info-left ui-corner-all">Enviar a DB</button>
-              </form>
-              <input type="number" id="txtX" value="0"/>
-              <input type="number" id="txtY" value="0"/>
-              <input type="number" id="txtZ" value="0"/>
-              <button id="btnStart" class="ui-btn ui-icon-info-left ui-corner-all">Start accelerometer</button>
+              <!-- <div data-role ="controlgroup" >
+                <a href="#pagetwo" class="ui-btn ui-icon-info-left ui-corner-all">Dialog: Hola Mundo!</a>
+                <a href="#myPopup" data-rel="popup" class="ui-btn ui-corner-all">Popup: Hola Mundo!</a>
+                <a data-role="collapsible" class="ui-corner-all" >
+                  <h1 align="center">Collapsible: Hola Mundo!</h1>
+                  <p>Hola Mundo!</p>
+                </a>
+              </div>
+                <div data-role="popup" id="myPopup" class="ui-content">
+                  <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+                  <p>Hola mundo, soy un Popup!</p>
+                </div> -->
             </div>
+          </fieldset>
 
-            <!-- <div data-role ="controlgroup" >
-              <a href="#pagetwo" class="ui-btn ui-icon-info-left ui-corner-all">Dialog: Hola Mundo!</a>
-              <a href="#myPopup" data-rel="popup" class="ui-btn ui-corner-all">Popup: Hola Mundo!</a>
-              <a data-role="collapsible" class="ui-corner-all" >
-                <h1 align="center">Collapsible: Hola Mundo!</h1>
-                <p>Hola Mundo!</p>
-              </a>
-            </div>
-              <div data-role="popup" id="myPopup" class="ui-content">
-                <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-                <p>Hola mundo, soy un Popup!</p>
-              </div> -->
-          </div>
-        </fieldset>
+      </div>
 
+
+      <div data-position="fixed" data-role='footer'>
+        <h1>Eduardo Brito - Sabato Ceruso - Adexe Sabina</h1>
+      </div>
     </div>
 
+    <!-- <div data-role="page" data-dialog="true"  id="pagetwo" >
+      <div data-theme='a' data-role='header' >
+        <h3>
+          Esto es un dialog.
+        </h3>
+      </div>
+      <div data-role="main" class="ui-content" align="center">
+        <h1>Hola mundo!</h1>
+        <a href="#" class="ui-btn ui-icon-back ui-btn-icon-left ui-btn-inline ui-corner-all" data-rel="back">Atras</a>
+      </div>
+      <div data-role="footer">
+        <h1>Hello World!</h1>
+      </div>
+    </div> -->
 
-    <div data-position="fixed" data-role='footer'>
-      <h1>Eduardo Brito - Sabato Ceruso - Adexe Sabina</h1>
-    </div>
-  </div>
-
-  <div data-role="page" data-dialog="true"  id="pagetwo" >
-    <div data-theme='a' data-role='header' >
-      <h3>
-        Esto es un dialog.
-      </h3>
-    </div>
-    <div data-role="main" class="ui-content" align="center">
-      <h1>Hola mundo!</h1>
-      <a href="#" class="ui-btn ui-icon-back ui-btn-icon-left ui-btn-inline ui-corner-all" data-rel="back">Atras</a>
-    </div>
-    <div data-role="footer">
-      <h1>Hello World!</h1>
-    </div>
-  </div>
-
-</body>
+  </body>
 </html>

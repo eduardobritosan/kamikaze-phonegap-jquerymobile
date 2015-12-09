@@ -1,14 +1,36 @@
   //run the following code whenever a new pseudo-page is created
+
+// document.addEventListener("touchstart", function() {}, false);
+
+
 $(document).ready(function () {
+
+
+      alert("dos");
+
+
+
+
+
   $("#showTable").click(function(){
 
-    $.getJSON('https://maps.googleapis.com/maps/api/geocode/json?latlng=28.485463,-16.321617&key=AIzaSyDQLq2s2_duTmkGDAYdWeKAuQLrBSxcZoo', function(res) {
-      if (res != undefined)
-      console.log(res.results[0].address_components[0].long_name);
-      else {
-        console.log("undefined");
-      }
-    });
+
+  //   console.log(navigator.accelerometer);
+  //   function onSuccess(acceleration) {
+  //       alert('Acceleration X: ' + acceleration.x + '\n' +
+  //             'Acceleration Y: ' + acceleration.y + '\n' +
+  //             'Acceleration Z: ' + acceleration.z + '\n' +
+  //             'Timestamp: '      + acceleration.timestamp + '\n');
+  //   }
+  //
+  //   function onError() {
+  //       alert('onError!');
+  //   }
+  //
+  //   var options = { frequency: 3000 };  // Update every 3 seconds
+  //
+  //   var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+
       // cache this page for later use (inside the AJAX function)
       // var $this = $(this);
       // make an AJAX call to your PHP script
@@ -28,7 +50,7 @@ $(document).ready(function () {
               output.push('</tr>');
           }
 
-          console.log(output);
+
           // if the PHP script returned an error
           } else {
 
