@@ -4,11 +4,11 @@ $(document).ready(function() {
   var options = { frequency: 300 };
   var watchId = 0;
   var maxValue = 0;
-
+  var pressed = false;
   document.addEventListener("deviceready", onDeviceReady, true);
 
   function onDeviceReady() {
-    $("#btnStart").click(function() {
+    $("#btnStart").bind('touchstart', function() {
 
       if(watchId == 0){
         watchId = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
@@ -16,7 +16,10 @@ $(document).ready(function() {
       else {
 
         navigator.accelerometer.clearWatch( watchId );
-        console.log("Error");
+        $('#btnStart').html('Start accelerometer');
+        watchId = 0;
+        alert(maxValue);
+        maxValue = 0;
       }
 
       function onSuccess(acceleration) {
