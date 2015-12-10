@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-
   var options = { frequency: 300 };
   var watchId = 0;
   var maxValue = 0;
