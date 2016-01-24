@@ -3,7 +3,7 @@ include("connect2.php");
 
 $output = array();
 
-if ($result = $mysqli->query("SELECT NOMBRE,PUNTUACION FROM PUNTUACIONES")) {
+if ($result = $mysqli->query("SELECT NOMBRE,CIUDAD,PUNTUACION FROM PUNTUACIONES ORDER BY PUNTUACION DESC")) {
     while($row = $result->fetch_row()){
       $output[] = $row;
     }
