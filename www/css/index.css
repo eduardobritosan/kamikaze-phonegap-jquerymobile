@@ -92,3 +92,9 @@ body {
 .ui-collapsible-heading .ui-btn {
   text-align:center;
 }​​
+
+.ui-table-reflow.ui-responsive { display: table !important; }
+
+.center-button{
+  margin: 0 auto;
+}

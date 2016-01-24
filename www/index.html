@@ -22,37 +22,28 @@
           Practica Phonegap - JQueryMobile
         </h1>
       </div>
-      <div data-role='main' class="ui-content" >
-          <fieldset class="ui-grid-b ui-responsive">
-            <div class="ui-block-a"></div>
-            <div class="ui-block-b" align="center">
-              <div data-role="content">
-                <table data-role="table" class="ui-responsive   ui-shadow">
+      <div data-role='main' class="ui-content">
+          <fieldset class="ui-grid-solo ui-responsive center-button">
+
+            <div  >
+              <div data-role="content" style="width: 95%; height: 400px; overflow: auto">
+                <table data-role="table" data-mode="column-toggle" class="ui-responsive ui-shadow">
                   <thead>
                     <tr>
-                      <th>Nombre</th>
-                      <th>
+                      <th data-priority="1">Nombre</th>
+                      <th data-priority="3">
                         Ciudad
                       </th>
-                      <th>Puntuacion</th>
+                      <th data-priority="2">Puntuacion</th>
 
                     </tr>
                   </thead>
                   <tbody data-role="table-body">
-                  <button id="showTable" class="ui-btn ui-icon-info-left ui-corner-all">Mostrar DB</button>
                   </tbody>
                 </table>
-
-                <form id="formAJAX">
-                  First name:<br>
-                  <input type="text" name="nombre" id="nombre">
-                  <button type="submit" class="ui-btn ui-icon-info-left ui-corner-all">Enviar a DB</button>
-                </form>
-                <input type="number" id="txtX" value="0"/>
-                <input type="number" id="txtY" value="0"/>
-                <input type="number" id="txtZ" value="0"/>
+                <input type="text" name="nombre" id="nombre">
                 <button id="btnStart" class="ui-btn ui-icon-info-left ui-corner-all">Start acceleration</button>
-                <button id="showGps" class="ui-btn ui-icon-info-left ui-corner-all">Mostrar Coordenadas</button>
+
               </div>
 
               <!-- <div data-role ="controlgroup" >
