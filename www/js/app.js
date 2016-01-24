@@ -15,7 +15,7 @@ $(document).ready(function() {
       }
       else {
         navigator.accelerometer.clearWatch( watchId );
-        $('#btnStart').html('Start accelerometer');
+        $('#btnStart').html('KAMIKAZE OTRA VEZ!');
         watchId = 0;
         send_data(maxValue);
         showTable();
@@ -25,7 +25,7 @@ $(document).ready(function() {
         if((maxValue < (acceleration.z + acceleration.x + acceleration.y) / 3) && (((acceleration.z + acceleration.x + acceleration.y) / 3) > 0)){
           maxValue = (acceleration.z + acceleration.x + acceleration.y) / 3 ;
         }
-        $('#btnStart').html('Stop watching');
+        $('#btnStart').html('Aterrizaje completado');
       }
       function onError() {
         alert('onError!');
@@ -85,6 +85,7 @@ $(document).ready(function() {
           // append the output to the `data-role="content"` div on this page as a
           // listview and trigger the `create` event on its parent to style the
           // listview
+          $("tbody").html("");
           $("tbody").append(output).trigger('create');
       });
   }
